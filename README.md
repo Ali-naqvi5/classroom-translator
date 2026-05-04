@@ -1,13 +1,13 @@
 # 🎓 Classroom Translator
 
-> Real-time bidirectional **English ↔ Urdu** translation for live classroom use — powered by Whisper large-v3, Silero VAD, GPT-4o-mini, and GPT-4o-mini-TTS.
+> Real-time bidirectional translation in between languages for live classroom, powered by Whisper large-v3, Silero VAD, GPT-4o-mini, and GPT-4o-mini-TTS.
 
 ---
 
 ## ✨ Features
 
 - 🎙️ **Silence-gated transcription** — Silero VAD detects natural speech boundaries before firing Whisper, so sentences are never cut off mid-thought
-- 🔄 **Bidirectional** — Teacher speaks English → Student hears Urdu; Student speaks Urdu → Teacher hears English
+- 🔄 **Bidirectional** — Teacher speaks his language → Student hears in his language; Student speaks his language → Teacher hears his own language.
 - 🏫 **Floor control** — Teacher holds the floor by default; Student raises hand, Teacher grants access
 - ⚡ **Fully pipelined** — VAD → Whisper → GPT-4o translation → TTS streaming run concurrently with zero blocking
 - 🔊 **Streaming TTS** — Audio chunks stream to the browser in real time via WebSocket, no buffering delay
@@ -63,6 +63,10 @@ graph TD
 4. Run all cells
 
 ---
+## Translation Prompts
+Just update the translation prompts according to own language requirments.
+
+---
 
 ## 🔑 Environment Variables / Secrets
 
@@ -88,7 +92,7 @@ graph TD
 ---
 
 ## 📡 How It Works
-
+In this test case.
 1. **Teacher** opens `/teacher` in their browser — microphone streams PCM audio over WebSocket
 2. **Silero VAD** runs on every 512-sample frame, accumulating speech into a buffer
 3. After **0.8s of silence**, the complete utterance is sent to **Whisper large-v3** for transcription
