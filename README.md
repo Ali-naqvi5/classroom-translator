@@ -1,4 +1,4 @@
-# 🎓 Classroom Translator
+# 🎓 Multi lingual Translator
 
 > Real-time bidirectional translation in between languages for live classroom, powered by Whisper large-v3, Silero VAD, GPT-4o-mini, and GPT-4o-mini-TTS.
 
